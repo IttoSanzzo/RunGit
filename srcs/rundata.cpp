@@ -6,7 +6,7 @@
 /*   By: marcosv2 <marcosv2@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:54:16 by marcosv2          #+#    #+#             */
-/*   Updated: 2024/09/27 23:03:06 by marcosv2         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:05:26 by marcosv2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void rundata::add(void) {
 	this->execute(GIT, arguments);
 	ft_nfreestr(&this->arguments[1]);
 	ft_nfreestr(&this->arguments[2]);
+	std::cout << COLOR_GREEN << "Files Added..." << COLOR_DEFAULT << std::endl;
 };
 
 void rundata::commit(void) {

@@ -6,7 +6,7 @@
 /*   By: marcosv2 <marcosv2@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:47:17 by marcosv2          #+#    #+#             */
-/*   Updated: 2024/09/27 23:02:51 by marcosv2         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:06:20 by marcosv2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 
 // 1. Macros
 	#define GIT "/usr/bin/git"
+	#define COLOR_DEFAULT "\033[0m"
+	#define COLOR_GREEN "\033[38;5;82m"
 
 // 2. Classes
 	class rundata {
