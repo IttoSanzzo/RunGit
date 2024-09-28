@@ -18,9 +18,6 @@ F_OBJS	= $(addprefix $(D_OBJS), $(N_SRCS:.cpp=.opp))
 
 all: $(NAME)
 
-test:
-	@echo $(F_OBJS)
-
 $(NAME): $(D_OBJS) $(F_OBJS)
 	$(C_COMP) $(C_FLAG) -I $(D_HDRS) -o $@ $(F_OBJS)
 
