@@ -6,7 +6,7 @@
 /*   By: marcosv2 <marcosv2@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:47:17 by marcosv2          #+#    #+#             */
-/*   Updated: 2024/09/27 23:07:28 by marcosv2         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:08:22 by marcosv2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 	#define GIT "/usr/bin/git"
 	#define COLOR_DEFAULT "\033[0m"
 	#define COLOR_RED "\033[38;5;160m"
+	#define COLOR_CIAN "\033[38;5;87m"
 	#define COLOR_GREEN "\033[38;5;82m"
 
 // 2. Classes
