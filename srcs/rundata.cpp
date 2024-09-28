@@ -6,7 +6,7 @@
 /*   By: marcosv2 <marcosv2@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:54:16 by marcosv2          #+#    #+#             */
-/*   Updated: 2024/09/27 23:06:47 by marcosv2         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:07:44 by marcosv2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void rundata::execute(std::string command, char** arguments) {
 	int	pid = fork();
 	if (pid == 0) {
 		execve(command.c_str(), (char * const*)arguments, this->enviroment);
-		std::cout << "Could't run " << command << "." << std::endl;
+		std::cout << COLOR_RED << "Could't run " << command << "." << COLOR_DEFAULT << std::endl;
 		ft_freetab(arguments);
 		exit (1);
 	}
