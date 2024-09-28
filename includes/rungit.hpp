@@ -6,7 +6,7 @@
 /*   By: marcosv2 <marcosv2@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:47:17 by marcosv2          #+#    #+#             */
-/*   Updated: 2024/09/27 21:53:23 by marcosv2         ###   ########.fr       */
+/*   Updated: 2024/09/27 22:45:41 by marcosv2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 	#include <unistd.h>
 	#include <stdlib.h>
 	#include <sys/wait.h>
+	#include <cstring>
 	#include <string>
 
 // 1. Macros
@@ -26,6 +27,7 @@
 // 2. Classes
 	class rundata {
 		private:
+			char**		arguments;
 			char**		enviroment;
 			std::string	path;
 			std::string	message;
@@ -37,7 +39,11 @@
 			void	commit(void);
 			void	push(void);
 		private:
-			void	execute(std::string command, const char**args);
+			void	execute(std::string command, char**args);
 	};
+
+// 3. Functions
+void	ft_nfreestr(char** str);
+void	ft_freetab(char** tab);
 
 #endif
