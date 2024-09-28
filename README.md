@@ -24,4 +24,4 @@ rungit <commit  message>
 
 -   In which, the `<commit massage>` should be the commit name you want for the push.
 -   Then, it will add all the files in the current directory, and recursively, commit then with the given message, and push then to github, all in one command.
--   But it's good to keep in mind that, it's as dangerous as conveniente, so be cautios when using it.
+-   But it's good to keep in mind that, it's as dangerous as conveniente, so be cautious when using it.
