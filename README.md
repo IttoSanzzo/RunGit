@@ -13,7 +13,7 @@ make
 -   Once compiled, you can add the `rungit` program to your /bin/ directory, to be able to use it anywhere:
 
 ```Bash
-cp ./rungit /bin/
+sudo cp ./rungit /bin/
 ```
 
 -   Then, you can use it by running the command bellow inside a repository directory:
