@@ -6,7 +6,7 @@
 /*   By: marcosv2 <marcosv2@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:54:16 by marcosv2          #+#    #+#             */
-/*   Updated: 2024/09/27 23:05:26 by marcosv2         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:06:47 by marcosv2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,5 @@ void rundata::push(void) {
 	this->arguments[1] = strdup("push");
 	this->execute(GIT, this->arguments);
 	ft_nfreestr(&this->arguments[1]);
+	std::cout << COLOR_GREEN << "Pushed!" << COLOR_DEFAULT << std::endl;
 };
