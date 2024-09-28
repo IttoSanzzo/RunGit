@@ -6,7 +6,7 @@
 /*   By: marcosv2 <marcosv2@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:54:16 by marcosv2          #+#    #+#             */
-/*   Updated: 2024/09/27 23:02:06 by marcosv2         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:03:06 by marcosv2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,20 +62,3 @@ void rundata::push(void) {
 	this->execute(GIT, this->arguments);
 	ft_nfreestr(&this->arguments[1]);
 };
-
-void	ft_nfreestr(char** str) {
-	if (*str != NULL) {
-		free(*str);
-		*str = NULL;
-	}
-}
-
-void	ft_freetab(char** tab) {
-	if (tab == NULL)
-		return;
-	int	i = -1;
-	while (tab[++i]) {
-		free(tab[i]);
-	}
-	free(tab);
-}

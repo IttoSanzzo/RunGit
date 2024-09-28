@@ -10,7 +10,8 @@ D_SRCS	= srcs/
 D_OBJS	= objs/
 
 N_SRCS	= rungit.cpp	\
-			rundata.cpp
+			rundata.cpp	\
+			utils.cpp
 F_OBJS	= $(addprefix $(D_OBJS), $(N_SRCS:.cpp=.opp))
 
 # 2. Rules
