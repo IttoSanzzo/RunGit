@@ -6,7 +6,7 @@
 /*   By: marcosv2 <marcosv2@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 20:54:16 by marcosv2          #+#    #+#             */
-/*   Updated: 2024/09/27 23:01:40 by marcosv2         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:02:06 by marcosv2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,8 @@ rundata::rundata(char** enviroment, std::string path, std::string message) {
 
 void rundata::execute(std::string command, char** arguments) {
 	(void)command;
-	std::cout << "Executing " << arguments[1] << std::endl;
 	int	pid = fork();
 	if (pid == 0) {
-		// execve("/bin/echo", arguments, this->enviroment);
 		execve(command.c_str(), (char * const*)arguments, this->enviroment);
 		std::cout << "Could't run " << command << "." << std::endl;
 		ft_freetab(arguments);
@@ -53,7 +51,6 @@ void rundata::commit(void) {
 	this->arguments[1] = strdup("commit");
 	this->arguments[2] = strdup("-m");
 	this->arguments[3] = strdup(this->message.c_str());
-	std::cout << "Commiting " << arguments[1] << " " << arguments[2] << " " << arguments[3] << std::endl;
 	this->execute(GIT, this->arguments);
 	ft_nfreestr(&this->arguments[1]);
 	ft_nfreestr(&this->arguments[2]);
